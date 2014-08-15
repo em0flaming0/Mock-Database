@@ -8,7 +8,7 @@ class Automobile(object):
 
 class Car(Automobile):
 	def __init__(self, make, model, year, color):
-		Automobile.__init__(self, "4")
+		Automobile.__init__(self, "4")  #all Car objects should have 4 wheels
 		self.make = make
 		self.model = model
 		self.year = year
@@ -17,7 +17,8 @@ class Car(Automobile):
 		self.engine = "N/A"  #default engine_type for all instances of Car
 
 class Bike(Automobile):
-	def __init__(self, make, model, year, color):	
+	def __init__(self, make, model, year, color):
+		Automobile.__init__(self, "2")  #all Bike objects should have 2 wheels
 		self.make = make
 		self.model = model
 		self.year = year
@@ -33,8 +34,6 @@ def main():
 	Car1.owner = "Mike Smith"
 	Car1.engine = "Supercharged"
 	Car2.owner = "Robert Johnson"
-	Car2.wheels = "4"
-	Bike1.wheels = "2"
 
 if __name__ == "__main__":
 	main()
