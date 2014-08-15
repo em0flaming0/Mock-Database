@@ -33,6 +33,5 @@ def main():
 	Car1.engine = "Supercharged"
 	Car2.owner = "Robert Johnson"
 
-	print Car1.wheels
 if __name__ == "__main__":
 	main()
