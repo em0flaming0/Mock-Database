@@ -1,8 +1,10 @@
 #!/usr/bin/python
 
+#demonstrating basic use of classes and inheritance 
+
 class Automobile(object):
 	def __init__(self, wheels):
-		self.wheels = wheels
+		self.wheels = wheels  #all autmobiles have wheels
 
 class Car(Automobile):
 	def __init__(self, make, model, year, color):
@@ -11,17 +13,16 @@ class Car(Automobile):
 		self.model = model
 		self.year = year
 		self.color = color
-		self.owner = None
-		self.engine = "N/A"
+		self.owner = None  #an optional attribute for Car objects
+		self.engine = "N/A"  #default engine_type for all instances of Car
 
-class Bike(object):
+class Bike(Automobile):
 	def __init__(self, make, model, year, color):	
 		self.make = make
 		self.model = model
 		self.year = year
 		self.color = color
 		self.owner = None
-		wheels = 2
 
 def main():
 	Car1 = Car("Ford", "Mustang", "2001", "Red")
@@ -32,6 +33,8 @@ def main():
 	Car1.owner = "Mike Smith"
 	Car1.engine = "Supercharged"
 	Car2.owner = "Robert Johnson"
+	Car2.wheels = "4"
+	Bike1.wheels = "2"
 
 if __name__ == "__main__":
 	main()
